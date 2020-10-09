@@ -1,0 +1,10 @@
+data = bytearray(10)
+
+try:
+    w = open("d.bin", "rb")
+    w.readinto(data)
+    w.close()
+    for ch in data:
+        print(hex(ch),end=" ")
+except Exception as e:
+    print("Failed",e)
