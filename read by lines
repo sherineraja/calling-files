@@ -1,0 +1,17 @@
+from sys import stderror
+try:
+    c = l = 0
+    s = open("text.txt", "rt")
+    lines = s.readlines(20)
+    while len(lines) != 0:
+        for line in lines:
+            l += 1
+            for ch in line:
+                print(ch,end=" ")
+                c += 1
+        lines = s.readlines(10)
+    s.close()
+    print(c,l)
+except IOerror as e:
+    print("Failed: ",strerror(e.errno))
+    
