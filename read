@@ -1,0 +1,13 @@
+from sys import strerror
+try:
+    c = 0
+    s = open("text.txt","rt")
+    ch = s.read(1)
+    while ch != " ":
+        print(ch,end=" ")
+        c += 1
+        ch = s.read(1)
+    s.close()
+    print(c)
+except IOerror as e:
+    print("Failed", str(e.errno))
