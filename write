@@ -1,0 +1,6 @@
+from sys import stderror
+try:
+    s = open("text.txt","wt")
+    for i in range(10):
+        s.write("line #",str(i+1),end="\n")
+    s.close()
