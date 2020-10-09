@@ -1,0 +1,9 @@
+data = bytearray(10)
+for i in range (len(data)):
+    data[i] = 10 - i
+try:
+    w = open("d.bin", "wb")
+    w.write(data)
+    w.close()
+except Exception as e:
+    print("Failed",e)
